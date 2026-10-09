@@ -7,7 +7,8 @@ namespace OOP_Generic_Collections
     enum Gender
     {
         Male,
-        Female
+        Female,
+        Other
     }
 
     internal class Employee
