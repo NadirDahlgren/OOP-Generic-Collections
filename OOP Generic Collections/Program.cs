@@ -36,7 +36,7 @@
                     $"Employees left in the stack: {employeeStack.Count}.");
             }
 
-            // STACK-POP: Using the pop-method to print every item in the stack. Stores the returned value in a new employee variable. Using the While-iteration since the EmployeeStack.Count reduces on every iteration from Pop-method. //
+            // STACK-POP: Using the pop-method to print every item in the stack. Stores the returned value in a new employee variable. Using the While-iteration since the employeeStack.Count reduces on every iteration from Pop-method. //
 
             Console.WriteLine("\nRetrieve using Pop Method:\n");
             while (employeeStack.Count > 0)
