@@ -17,68 +17,68 @@
 
             // STACK-PUSH: New stack for the employees and pushing them into the stack. //
 
-            Stack<Employee> EmployeeStack = new Stack<Employee>();
-            EmployeeStack.Push(employeeOne);
-            EmployeeStack.Push(employeeTwo);
-            EmployeeStack.Push(employeeThree);
-            EmployeeStack.Push(employeeFour);
-            EmployeeStack.Push(employeeFive);
+            Stack<Employee> employeeStack = new Stack<Employee>();
+            employeeStack.Push(employeeOne);
+            employeeStack.Push(employeeTwo);
+            employeeStack.Push(employeeThree);
+            employeeStack.Push(employeeFour);
+            employeeStack.Push(employeeFive);
 
             // STACK-PRINT: Printing out every employee in the stack. // 
 
             Console.WriteLine("Employee list:\n");
-            foreach (var employee in EmployeeStack)
+            foreach (var employee in employeeStack)
             {
                 Console.WriteLine($"ID: {employee.Id} - " +
                     $"Name: {employee.Name} - " +
                     $"Gender: {employee.Gender} - " +
                     $"Salary: {employee.Salary} \n" +
-                    $"Employees left in the stack: {EmployeeStack.Count}.");
+                    $"Employees left in the stack: {employeeStack.Count}.");
             }
 
             // STACK-POP: Using the pop-method to print every item in the stack. Stores the returned value in a new employee variable. Using the While-iteration since the EmployeeStack.Count reduces on every iteration from Pop-method. //
 
             Console.WriteLine("\nRetrieve using Pop Method:\n");
-            while (EmployeeStack.Count > 0)
+            while (employeeStack.Count > 0)
             {
-                Employee employeePop = EmployeeStack.Pop();
+                Employee employeePop = employeeStack.Pop();
                 Console.WriteLine($"ID: {employeePop.Id} - " +
                     $"Name: {employeePop.Name} - " +
                     $"Gender: {employeePop.Gender} - " +
                     $"Salary: {employeePop.Salary} \n" +
-                    $"Employees left in the stack: {EmployeeStack.Count}.");
+                    $"Employees left in the stack: {employeeStack.Count}.");
             }
 
             // STACK-PUSH: Pushing them into the stack again. //
 
-            EmployeeStack.Push(employeeOne);
-            EmployeeStack.Push(employeeTwo);
-            EmployeeStack.Push(employeeThree);
-            EmployeeStack.Push(employeeFour);
-            EmployeeStack.Push(employeeFive);
+            employeeStack.Push(employeeOne);
+            employeeStack.Push(employeeTwo);
+            employeeStack.Push(employeeThree);
+            employeeStack.Push(employeeFour);
+            employeeStack.Push(employeeFive);
 
             // PEEK 1: Checking on the top person without removing it. //
 
             Console.WriteLine("\nRetrieve using Peek Method:\n");
-            Employee employeePeek = EmployeeStack.Peek();
+            Employee employeePeek = employeeStack.Peek();
             Console.WriteLine($"ID: {employeePeek.Id} - " +
             $"Name: {employeePeek.Name} - " +
             $"Gender: {employeePeek.Gender} - " +
             $"Salary: {employeePeek.Salary} \n" +
-            $"Employees left in the stack: {EmployeeStack.Count}.");
+            $"Employees left in the stack: {employeeStack.Count}.");
 
             // PEEK 2: Doing it again with peek-method. //
 
-            Employee employeePeekTwo = EmployeeStack.Peek();
+            Employee employeePeekTwo = employeeStack.Peek();
             Console.WriteLine($"ID: {employeePeekTwo.Id} - " +
             $"Name: {employeePeekTwo.Name} - " +
             $"Gender: {employeePeekTwo.Gender} - " +
             $"Salary: {employeePeekTwo.Salary} \n" +
-            $"Employees left in the stack: {EmployeeStack.Count}.");
+            $"Employees left in the stack: {employeeStack.Count}.");
 
             // CHECK EMPLOYEE THREE: Check if employee three is in the stack. //
 
-            if (EmployeeStack.Contains(employeeThree))
+            if (employeeStack.Contains(employeeThree))
             {
                 Console.WriteLine("\nEmployee Check Number Three:\n" +
                 "Employee Number Three is in the stack.");
@@ -93,16 +93,16 @@
 
             // LIST: New list and adding the objects from the Employee-class. //
 
-            List<Employee> EmployeeList = new List<Employee>();
-            EmployeeList.Add(employeeOne);
-            EmployeeList.Add(employeeTwo);
-            EmployeeList.Add(employeeThree);
-            EmployeeList.Add(employeeFour);
-            EmployeeList.Add(employeeFive);
+            List<Employee> employeeList = new List<Employee>();
+            employeeList.Add(employeeOne);
+            employeeList.Add(employeeTwo);
+            employeeList.Add(employeeThree);
+            employeeList.Add(employeeFour);
+            employeeList.Add(employeeFive);
 
             // CHECK OBJECT TWO: Checking for object two in Employee-list. Using a bool-variable for future usage. // 
 
-            bool employeeCheckTwo = EmployeeList.Contains(employeeTwo);
+            bool employeeCheckTwo = employeeList.Contains(employeeTwo);
             if (employeeCheckTwo)
             {
                 Console.WriteLine("\nEmployee Check Number Two:\n" +
@@ -116,7 +116,7 @@
 
             // PRINT FIRST MALE: Checking after the first male in the list and printing it out. //
 
-            Employee firstMale = EmployeeList.Find(employee => employee.Gender == Gender.Male);
+            Employee firstMale = employeeList.Find(employee => employee.Gender == Gender.Male);
             Console.WriteLine($"\nFirst male in the list is:\n" +
             $"ID: {firstMale.Id} - " +
             $"Name: {firstMale.Name} - " +
@@ -125,7 +125,7 @@
 
             // PRINT ALL MALES: Checking for all males. Creating a new list with FindAll-method for the male-genders. //
 
-            List<Employee> maleEmployees = EmployeeList.FindAll(employee => employee.Gender == Gender.Male);
+            List<Employee> maleEmployees = employeeList.FindAll(employee => employee.Gender == Gender.Male);
             Console.WriteLine("All males in the list:\n");
             foreach (Employee males in maleEmployees)
             {
